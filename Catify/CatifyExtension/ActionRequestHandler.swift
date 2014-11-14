@@ -15,26 +15,23 @@ class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
     
     func beginRequestWithExtensionContext(context: NSExtensionContext) {
         self.extensionContext = context
-        var itemProvider: NSItemProvider?
         
         if let item = context.inputItems.first as? NSExtensionItem {
-            if let attachment = item.attachments?.first as? NSItemProvider {
-                itemProvider = attachment
-            }
-        }
-        
-        let itemType = String(kUTTypePropertyList)
-        if itemProvider?.hasItemConformingToTypeIdentifier(itemType) == true {
-            itemProvider?.loadItemForTypeIdentifier(itemType, options: nil) {
-                item, error in
-                let dictionary = item as NSDictionary
-                NSOperationQueue.mainQueue().addOperationWithBlock {
-                    let results = dictionary[NSExtensionJavaScriptPreprocessingResultsKey] as NSDictionary
-                    self.itemLoadCompletedWithPreprocessingResults(results)
+            if let provider = item.attachments?.first as? NSItemProvider {
+                let itemType = String(kUTTypePropertyList)
+                if provider.hasItemConformingToTypeIdentifier(itemType) {
+                    provider.loadItemForTypeIdentifier(itemType, options: nil) {
+                        item, error in
+                        let dictionary = item as NSDictionary
+                        NSOperationQueue.mainQueue().addOperationWithBlock {
+                            let results = dictionary[NSExtensionJavaScriptPreprocessingResultsKey] as NSDictionary
+                            self.itemLoadCompletedWithPreprocessingResults(results)
+                        }
+                    }
+                } else {
+                    self.doneWithResults(nil)
                 }
             }
-        } else {
-            self.doneWithResults(nil)
         }
     }
     

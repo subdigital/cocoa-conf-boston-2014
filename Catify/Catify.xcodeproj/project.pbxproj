@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5114FF51A1630B8000D2412 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5114FF41A1630B8000D2412 /* Icon@2x.png */; };
+		B5114FF61A1630B8000D2412 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5114FF41A1630B8000D2412 /* Icon@2x.png */; };
 		B56589E319DB857D00477DF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56589E219DB857D00477DF2 /* AppDelegate.swift */; };
 		B56589E519DB857D00477DF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56589E419DB857D00477DF2 /* ViewController.swift */; };
 		B56589E819DB857D00477DF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56589E619DB857D00477DF2 /* Main.storyboard */; };
@@ -57,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B5114FF41A1630B8000D2412 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B56589DD19DB857D00477DF2 /* Catify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56589E119DB857D00477DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56589E219DB857D00477DF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 			children = (
 				B5658A0A19DB85D700477DF2 /* ActionRequestHandler.swift */,
 				B5658A0C19DB85D700477DF2 /* Action.js */,
+				B5114FF41A1630B8000D2412 /* Icon@2x.png */,
 				B5658A0819DB85D700477DF2 /* Supporting Files */,
 			);
 			path = CatifyExtension;
@@ -279,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B56589E819DB857D00477DF2 /* Main.storyboard in Resources */,
+				B5114FF51A1630B8000D2412 /* Icon@2x.png in Resources */,
 				B56589ED19DB857D00477DF2 /* LaunchScreen.xib in Resources */,
 				B56589EA19DB857D00477DF2 /* Images.xcassets in Resources */,
 			);
@@ -296,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5658A0D19DB85D700477DF2 /* Action.js in Resources */,
+				B5114FF61A1630B8000D2412 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +547,7 @@
 				B56589FE19DB857D00477DF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B56589FF19DB857D00477DF2 /* Build configuration list for PBXNativeTarget "CatifyTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +556,7 @@
 				B5658A0119DB857D00477DF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5658A1319DB85D700477DF2 /* Build configuration list for PBXNativeTarget "CatifyExtension" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +565,7 @@
 				B5658A1519DB85D700477DF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
