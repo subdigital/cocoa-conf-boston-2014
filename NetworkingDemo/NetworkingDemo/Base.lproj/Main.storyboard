@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="u0J-u6-HbE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Networking Demo-->
+        <scene sceneID="4WR-kP-HGE">
+            <objects>
+                <tableViewController id="qlk-6D-fJY" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OQR-KI-nNe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="t7C-Y4-jhU">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="httpget" rowHeight="50" id="pHt-qQ-KZ1">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pHt-qQ-KZ1" id="boY-qE-QYa">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HTTP GET / POST (with JSON)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLz-W9-D4D">
+                                                    <rect key="frame" x="8" y="14.5" width="237" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dLz-W9-D4D" firstAttribute="leading" secondItem="boY-qE-QYa" secondAttribute="leadingMargin" id="PUN-En-2Ra"/>
+                                                <constraint firstAttribute="centerY" secondItem="dLz-W9-D4D" secondAttribute="centerY" constant="0.25" id="ugm-jX-he7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="show" id="uIa-jL-LFf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="downloadimage" rowHeight="50" id="LIF-Mj-VaT">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LIF-Mj-VaT" id="Ttq-pc-boL">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download an Image (with Progress)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSk-Il-9bM">
+                                                    <rect key="frame" x="8" y="14.5" width="271.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gSk-Il-9bM" firstAttribute="leading" secondItem="Ttq-pc-boL" secondAttribute="leadingMargin" id="8GV-fY-WbO"/>
+                                                <constraint firstAttribute="centerY" secondItem="gSk-Il-9bM" secondAttribute="centerY" constant="0.25" id="r7N-lC-j6V"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ZJB-lt-3g3" kind="show" id="3sa-av-KgY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchitunes" rowHeight="50" id="S1R-JG-FS0">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S1R-JG-FS0" id="jy9-2S-EZC">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching iTunes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-Wh-yi0">
+                                                    <rect key="frame" x="8" y="14" width="131" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="gOa-Wh-yi0" secondAttribute="centerY" id="MHD-EI-QfS"/>
+                                                <constraint firstItem="gOa-Wh-yi0" firstAttribute="leading" secondItem="jy9-2S-EZC" secondAttribute="leadingMargin" id="kgt-Xc-maF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="M7v-NH-f2S" kind="show" id="hOh-Oj-dA7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="collectionview" rowHeight="50" id="tMN-BZ-09w">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tMN-BZ-09w" id="nz9-Jv-xcq">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection View Cell image fetching" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NP-bO-frp">
+                                                    <rect key="frame" x="8" y="14" width="270" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8NP-bO-frp" firstAttribute="leading" secondItem="nz9-Jv-xcq" secondAttribute="leadingMargin" id="2bR-Jv-kPD"/>
+                                                <constraint firstAttribute="centerY" secondItem="8NP-bO-frp" secondAttribute="centerY" constant="0.25" id="6ka-eR-ZjN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="D3g-GE-UGO" kind="show" id="cy3-lf-RdS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resumableDownloads" rowHeight="50" id="Tti-YQ-1fh">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tti-YQ-1fh" id="cLx-ye-meY">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resumable Downloads" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2U-yA-MC3">
+                                                    <rect key="frame" x="8" y="14" width="177" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="x2U-yA-MC3" secondAttribute="centerY" constant="0.25" id="HgH-Vd-9zH"/>
+                                                <constraint firstItem="x2U-yA-MC3" firstAttribute="leading" secondItem="cLx-ye-meY" secondAttribute="leadingMargin" id="ISB-h1-EcT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aLi-ul-fJL" kind="show" id="Ltd-Iy-7RH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="qlk-6D-fJY" id="fJD-jM-akj"/>
+                            <outlet property="delegate" destination="qlk-6D-fJY" id="vbw-l7-k2n"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Networking Demo" id="ZoI-Fb-XzF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iG1-tt-CQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="294"/>
+        </scene>
+        <!--Search iTunes-->
+        <scene sceneID="76z-zQ-cdp">
+            <objects>
+                <tableViewController title="Search iTunes" id="M7v-NH-f2S" customClass="ITunesViewController" customModule="NetworkingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ld3-fK-cJJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="prominent" id="qQO-Dd-bUf">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="M7v-NH-f2S" id="XHc-A1-njW"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1JU-FN-4gk">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1JU-FN-4gk" id="pdF-aA-GpM">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M7v-NH-f2S" id="RuY-os-9QF"/>
+                            <outlet property="delegate" destination="M7v-NH-f2S" id="kDe-bp-6Sv"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="qQO-Dd-bUf" id="afv-yC-pst"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9VC-m6-zSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="522" y="1046"/>
+        </scene>
+        <!--HTTP GET / POST-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="HTTP GET / POST" id="vXZ-lx-hvc" customClass="ViewController" customModule="NetworkingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlF-L5-LBT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.12375710227272729" green="0.12375710227272729" blue="0.12375710227272729" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.072335162255179331" green="1" blue="0.020807719359293597" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UlF-L5-LBT" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="6Cp-Kc-0mL"/>
+                            <constraint firstAttribute="trailing" secondItem="UlF-L5-LBT" secondAttribute="trailing" id="B3I-Z2-F7x"/>
+                            <constraint firstItem="UlF-L5-LBT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iAK-7C-igf"/>
+                            <constraint firstAttribute="bottom" secondItem="UlF-L5-LBT" secondAttribute="bottom" id="oDq-TJ-xei"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="outputTextView" destination="UlF-L5-LBT" id="uuU-3K-h4A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="-957"/>
+        </scene>
+        <!--Image Download-->
+        <scene sceneID="WDN-m5-Hsd">
+            <objects>
+                <viewController title="Image Download" id="ZJB-lt-3g3" customClass="ImageDownloadViewController" customModule="NetworkingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VML-zI-TAj"/>
+                        <viewControllerLayoutGuide type="bottom" id="bBZ-Ab-hlx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D0b-Y1-aab">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gp1-bs-CZv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKI-Ke-0z5">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="37a-Sg-gHW"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Download Image" id="lYh-LM-gik">
+                                        <connections>
+                                            <action selector="downloadImageTapped:" destination="ZJB-lt-3g3" id="Ahu-Uj-FcD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NQH-vS-zQv"/>
+                                    <barButtonItem style="plain" id="gcK-yE-ctg">
+                                        <progressView key="customView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" id="vRL-CV-AcR">
+                                            <rect key="frame" x="156" y="21" width="228" height="2.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="trackTintColor" red="0.81143071633482411" green="0.86456140300873496" blue="0.89143386994949492" alpha="1" colorSpace="calibratedRGB"/>
+                                        </progressView>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gp1-bs-CZv" firstAttribute="leading" secondItem="D0b-Y1-aab" secondAttribute="leading" id="6LK-Lt-d0h"/>
+                            <constraint firstAttribute="trailing" secondItem="jKI-Ke-0z5" secondAttribute="trailing" id="De5-iV-UBS"/>
+                            <constraint firstItem="bBZ-Ab-hlx" firstAttribute="top" secondItem="jKI-Ke-0z5" secondAttribute="bottom" id="Hl9-na-mRF"/>
+                            <constraint firstItem="Gp1-bs-CZv" firstAttribute="top" secondItem="D0b-Y1-aab" secondAttribute="top" id="Jfh-6I-TXT"/>
+                            <constraint firstAttribute="trailing" secondItem="Gp1-bs-CZv" secondAttribute="trailing" id="nm4-me-YCP"/>
+                            <constraint firstItem="jKI-Ke-0z5" firstAttribute="leading" secondItem="D0b-Y1-aab" secondAttribute="leading" id="tPD-vN-RyK"/>
+                            <constraint firstItem="bBZ-Ab-hlx" firstAttribute="top" secondItem="Gp1-bs-CZv" secondAttribute="bottom" id="xDs-vb-Q5p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Gp1-bs-CZv" id="goN-DS-T0M"/>
+                        <outlet property="progressView" destination="vRL-CV-AcR" id="nlG-Ml-31I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMD-vW-ufT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="-309"/>
+        </scene>
+        <!--Cell Image Fetching-->
+        <scene sceneID="5Y5-Nm-jgU">
+            <objects>
+                <collectionViewController title="Cell Image Fetching" id="D3g-GE-UGO" customClass="ImageCollectionViewController" customModule="NetworkingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="D2d-Kt-vX1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WbF-3C-pno">
+                            <size key="itemSize" width="160" height="160"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="qGl-BW-A1a" customClass="ImageCollectionViewCell" customModule="NetworkingDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jYa-Pg-rw6">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="jYa-Pg-rw6" firstAttribute="leading" secondItem="qGl-BW-A1a" secondAttribute="leading" id="XEt-6J-wrl"/>
+                                    <constraint firstItem="jYa-Pg-rw6" firstAttribute="top" secondItem="qGl-BW-A1a" secondAttribute="top" id="cSw-Cp-0o3"/>
+                                    <constraint firstAttribute="bottom" secondItem="jYa-Pg-rw6" secondAttribute="bottom" id="kFf-lq-SL2"/>
+                                    <constraint firstAttribute="trailing" secondItem="jYa-Pg-rw6" secondAttribute="trailing" id="tMl-cn-2vM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="jYa-Pg-rw6" id="Ouz-4K-Kwa"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="D3g-GE-UGO" id="WWU-oz-1w6"/>
+                            <outlet property="delegate" destination="D3g-GE-UGO" id="zSE-fg-E4u"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9u-kW-fKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="372"/>
+        </scene>
+        <!--Resumable Downloads-->
+        <scene sceneID="6xk-SV-kK3">
+            <objects>
+                <viewController title="Resumable Downloads" id="aLi-ul-fJL" customClass="ResumableDownloadViewController" customModule="NetworkingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PAv-Ne-uFn"/>
+                        <viewControllerLayoutGuide type="bottom" id="VXA-KZ-Gk7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yY1-JQ-vyf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GFx-1Q-UIM">
+                                <rect key="frame" x="16" y="298" width="568" height="2.5"/>
+                                <color key="trackTintColor" red="0.81143071629999997" green="0.86456140299999995" blue="0.89143386989999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOt-e9-YYO">
+                                <rect key="frame" x="251" y="232" width="98" height="30"/>
+                                <state key="normal" title="Download File">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadFileTapped:" destination="aLi-ul-fJL" eventType="touchUpInside" id="lF1-tB-77y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3h-hu-kBU">
+                                <rect key="frame" x="393" y="232" width="43" height="30"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="0.85099999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseTapped:" destination="aLi-ul-fJL" eventType="touchUpInside" id="yoe-LX-BRq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="SOt-e9-YYO" secondAttribute="centerX" id="5in-CR-jkL"/>
+                            <constraint firstItem="GFx-1Q-UIM" firstAttribute="leading" secondItem="yY1-JQ-vyf" secondAttribute="leadingMargin" id="AAY-Al-iln"/>
+                            <constraint firstItem="GFx-1Q-UIM" firstAttribute="top" secondItem="SOt-e9-YYO" secondAttribute="bottom" constant="36" id="DYy-Mt-FBD"/>
+                            <constraint firstItem="GFx-1Q-UIM" firstAttribute="trailing" secondItem="yY1-JQ-vyf" secondAttribute="trailingMargin" id="Ggv-qH-4aT"/>
+                            <constraint firstItem="u3h-hu-kBU" firstAttribute="leading" secondItem="SOt-e9-YYO" secondAttribute="trailing" constant="44" id="P8R-tB-dJK"/>
+                            <constraint firstItem="GFx-1Q-UIM" firstAttribute="top" secondItem="u3h-hu-kBU" secondAttribute="bottom" constant="36" id="ktY-cR-W3f"/>
+                            <constraint firstAttribute="centerY" secondItem="GFx-1Q-UIM" secondAttribute="centerY" constant="1.25" id="v4r-xZ-3tv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="GFx-1Q-UIM" id="Vqj-Bp-WEk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRK-bn-uau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="826"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5KF-Iz-JU7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u0J-u6-HbE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sWi-sp-9Ls">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qlk-6D-fJY" kind="relationship" relationship="rootViewController" id="z9R-a5-Un9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKw-rq-oSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-422" y="294"/>
+        </scene>
+    </scenes>
+</document>
